@@ -8,6 +8,14 @@ body{
    margin: 0;
    padding: 0;
 }
+
+h1, h2, h3, h4, h5, h6{
+   text-shadow: 0.5px 0.5px 8px white; 
+}
+
+a {
+ text-decoration: none;
+}
 .container{
    position: relative;
    z-index: 1;
@@ -15,33 +23,40 @@ body{
 /* ----------------------------------------------------- */
 
 /* start navbar */
+
+
+/* NAVBAR */
+
+nav{
+   z-index: 100;
+}
+
+
+
 .main{
    height: 100vh;
    background-image: url("../images/main-bg-1.jpg");
    background-size: cover;
 }
-.main .nav{
-   position: relative;
-   z-index: 1;
-}
-.main .nav .logo{
-   cursor: pointer;
-}
-.main .nav .logo div{
-   width: 40px;
-   height: 1px;
-   background-color: white;
-   margin-bottom: 7px;
-}
-.main .nav .logo div:nth-child(1){
-   width: 20px;
-}
-.main .nav .logo div:nth-child(3){
-   width: 25px;
-}
-/* end navbar */
 
-/* ------------------------------------------------------ */
+
+.navbar a {
+   color: #fff;
+   margin-right: 50px;
+   font-size: 1.5rem;
+   cursor: pointer;
+   text-shadow: 0.5px 0.5px 9px white;
+ }
+ 
+ nav .logo img {
+   max-width: 150px;
+ }
+ 
+ .navbar-expand-lg {
+   padding: 20px ;
+}
+
+
 
 /* start content */
 .main .container .left p{
