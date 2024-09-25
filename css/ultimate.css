@@ -1,0 +1,91 @@
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+body{
+   font-family: "Roboto", sans-serif;
+   margin: 0;
+   padding: 0;
+}
+.container{
+   position: relative;
+   z-index: 1;
+}
+/* ----------------------------------------------------- */
+
+/* start navbar */
+.main{
+   height: 100vh;
+   background-image: url("../images/main-bg-1.jpg");
+   background-size: cover;
+}
+.main .nav{
+   position: relative;
+   z-index: 1;
+}
+.main .nav .logo{
+   cursor: pointer;
+}
+.main .nav .logo div{
+   width: 40px;
+   height: 1px;
+   background-color: white;
+   margin-bottom: 7px;
+}
+.main .nav .logo div:nth-child(1){
+   width: 20px;
+}
+.main .nav .logo div:nth-child(3){
+   width: 25px;
+}
+/* end navbar */
+
+/* ------------------------------------------------------ */
+
+/* start content */
+.main .container .left p{
+   width: 330px;
+}
+.main .container .left a{
+   color: white;
+   letter-spacing: 3px;
+   padding: 0 0 5px;
+   text-decoration: none;
+   border-bottom: 2px solid white;
+   transition: 0.3s ;
+   cursor: pointer;
+}
+.main .container .left a:hover{
+   color: #777;
+}
+.main .container .mid img{
+   animation: planetRotate 100s linear infinite ;
+}
+.main .container .mid .text{
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);
+   display: grid;
+   place-items: center;
+   color: white;
+}
+.main .container .mid .text h1{
+   font-size: 60px;
+   letter-spacing: 5px;
+}
+.main .container .mid .shad{
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   width: 75%;
+   height: 75%;
+   border-radius: 50%;
+   box-shadow: 0 0 50px 5px #ff8507;
+}
+@keyframes planetRotate {
+   100%{
+      transform: rotate(360deg);
+   }
+}
+/* end content */
