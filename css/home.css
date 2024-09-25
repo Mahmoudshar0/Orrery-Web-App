@@ -1,28 +1,29 @@
-/* MAIN */
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
+/**
+ * MAIN
+ *
+ */
 
-  a{
-    text-decoration: none;
-  }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
+a {
+  text-decoration: none;
+}
 
 /* NAVBAR */
 
-
-
-.navbar a{
+.navbar a {
   color: #fff;
   margin-right: 50px;
   font-size: 1.5rem;
   cursor: pointer;
-  text-shadow: 0.5px 0.5px 9px white ;
+  text-shadow: 0.5px 0.5px 9px white;
 }
 
-nav .logo img{
+nav .logo img {
   max-width: 150px;
 }
 
@@ -30,44 +31,29 @@ nav .logo img{
   padding: 0;
 }
 
-
-
-
 /* HEADER */
 
-  header{
-    background-image: url('../images/bg22.jpg');
-    background-color: rgba(0, 0, 0, 0.249);
-  background-blend-mode: soft-light;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 5;
-    height: 60vh;
-    padding: 10px;
-    border-radius: 0 0 70px 70px;
-  }
+header {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(0, 0, 0)),
+    url("../images/bg22.jpg");
+  filter: brightness(1.2);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 5;
+  height: 60vh;
+  padding: 10px;
+  border-radius: 0 0 70px 70px;
+}
 
-
-  
- 
-  
-
-
- 
-
-
- 
 /* ANIMATED BUTTON */
 
-
-
- .animated-button1 {
+.animated-button1 {
   background: linear-gradient(-30deg, #000000 50%, #090909 50%);
   padding: 20px 40px;
   margin: 50px;
   display: inline-block;
   -webkit-transform: translate(0%, 0%);
-          transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
   overflow: hidden;
   color: #f7d4d4;
   font-size: 20px;
@@ -76,12 +62,11 @@ nav .logo img{
   text-transform: uppercase;
   text-decoration: none;
   -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-          
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .animated-button1::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0px;
   left: 0px;
@@ -89,8 +74,8 @@ nav .logo img{
   height: 100%;
   background-color: #ad8585;
   opacity: 0;
-  -webkit-transition: .2s opacity ease-in-out;
-  transition: .2s opacity ease-in-out;
+  -webkit-transition: 0.2s opacity ease-in-out;
+  transition: 0.2s opacity ease-in-out;
 }
 
 .animated-button1:hover::before {
@@ -106,20 +91,26 @@ nav .logo img{
   left: 0px;
   width: 100%;
   height: 2px;
-  background: -webkit-gradient(linear, right top, left top, from(#26d9d3), to(#26d9d3));
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(#26d9d3),
+    to(#26d9d3)
+  );
   background: linear-gradient(to left, #26d9d3, #26d9d3);
   -webkit-animation: 2s animateTop linear infinite;
-          animation: 2s animateTop linear infinite;
+  animation: 2s animateTop linear infinite;
 }
 
 @keyframes animateTop {
   0% {
     -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    transform: translateX(100%);
   }
   100% {
     -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
 
@@ -128,20 +119,26 @@ nav .logo img{
   right: 0px;
   height: 100%;
   width: 2px;
-  background: -webkit-gradient(linear, left bottom, left top, from(#26d9d3), to(#26d9d3));
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#26d9d3),
+    to(#26d9d3)
+  );
   background: linear-gradient(to top, #26d9d3, #26d9d3);
   -webkit-animation: 2s animateRight linear -1s infinite;
-          animation: 2s animateRight linear -1s infinite;
+  animation: 2s animateRight linear -1s infinite;
 }
 
 @keyframes animateRight {
   0% {
     -webkit-transform: translateY(100%);
-            transform: translateY(100%);
+    transform: translateY(100%);
   }
   100% {
     -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    transform: translateY(-100%);
   }
 }
 
@@ -150,20 +147,26 @@ nav .logo img{
   left: 0px;
   width: 100%;
   height: 2px;
-  background: -webkit-gradient(linear, left top, right top, from(#26d9d3), to(#26d9d3));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#26d9d3),
+    to(#26d9d3)
+  );
   background: linear-gradient(to right, #26d9d3, #26d9d3);
   -webkit-animation: 2s animateBottom linear infinite;
-          animation: 2s animateBottom linear infinite;
+  animation: 2s animateBottom linear infinite;
 }
 
 @keyframes animateBottom {
   0% {
     -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
   }
   100% {
     -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    transform: translateX(100%);
   }
 }
 
@@ -172,27 +175,31 @@ nav .logo img{
   left: 0px;
   height: 100%;
   width: 2px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#26d9d3), to(#26d9d3));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#26d9d3),
+    to(#26d9d3)
+  );
   background: linear-gradient(to bottom, #26d9d3, #26d9d3);
   -webkit-animation: 2s animateLeft linear -1s infinite;
-          animation: 2s animateLeft linear -1s infinite;
+  animation: 2s animateLeft linear -1s infinite;
 }
 
 @keyframes animateLeft {
   0% {
     -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    transform: translateY(-100%);
   }
   100% {
     -webkit-transform: translateY(100%);
-            transform: translateY(100%);
+    transform: translateY(100%);
   }
 }
 
-
-
 /* SECTION  */
-section{
+section {
   z-index: 1000;
 }
 
@@ -207,10 +214,9 @@ section{
   transform: translateY(0);
 }
 
-
 /* CARDS */
 
-.card{
+.card {
   margin: 25px;
   box-shadow: 0.5px 0.5px 10px darkblue;
   border: none;
@@ -218,13 +224,17 @@ section{
   color: white;
 }
 
-.card button{
-  box-shadow: 0.5px 0.5px 10px blue;
-  margin-top: 10px ;
+.card h3{
+  text-shadow: 0.5px 0.5px 8px white;
 }
-.card button a{
+
+.card button {
+  box-shadow: 0.5px 0.5px 10px blue;
+  margin-top: 10px;
+}
+.card button a {
   color: #fff;
 }
-.card button:hover{
+.card button:hover {
   box-shadow: 1px 1px 20px blue;
 }
