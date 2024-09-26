@@ -7,7 +7,7 @@ h1{
 
 
 
-@media screen and (max-width:990px){
+@media screen and (max-width:1200px){
 
     .earth{
         flex-direction: column;
