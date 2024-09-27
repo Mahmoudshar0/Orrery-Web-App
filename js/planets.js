@@ -1,4 +1,4 @@
-let imgs = ["../images/mercury.png", "../images/venus.png", "../images/earth.png", "../images/mars.png", "../images/jupiter.png", "../images/saturn.png", "../images/uranus.png", "../images/neptune.png" , "../images/sun6.png"];
+let imgs = ["../images/mercury.png", "../images/venus.png", "../images/earth.png", "../images/mars.png", "../images/jupiter.png", "../images/saturn.png", "../images/uranus.png", "../images/neptune.png" , "../images/sun.png"];
 let shads = ["#d8d8d8", "#d79755", "#d6e6ff", "#EFA463", "#C8C3C0", "#D5BC8B", "#B1E7EA", "#71C3FB" , "#ff8507"];
 let planetsName = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune" , "sun"];
 let planet = document.getElementById("planet");
@@ -12,7 +12,7 @@ let cntr = 0;
 
 
 
-planet.src = "../images/sun6.png";
+planet.src = "../images/sun.png";
 function p_transition(){
    cntr = (cntr + 1) % imgs.length;
    mid.style.opacity="0";
