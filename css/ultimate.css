@@ -27,18 +27,17 @@ a {
 
 /* NAVBAR */
 
-nav{
-   z-index: 100;
-}
-
-
-
 .main{
    height: 100vh;
    background-image: url("../images/main-bg-1.jpg");
    background-size: cover;
+   transition: 0.5s;
 }
 
+/* ------------------------------------------------------------- */
+nav{
+   z-index: 100;
+}
 
 .navbar a {
    color: #fff;
@@ -56,6 +55,7 @@ nav{
    padding: 20px ;
 }
 
+/* --------------------------------------------------------- */
 
 
 /* start content */
@@ -74,8 +74,14 @@ nav{
 .main .container .left a:hover{
    color: #777;
 }
+.main .container .mid{
+   width: 500px;
+   transition: 0.4s;
+}
 .main .container .mid img{
    animation: planetRotate 100s linear infinite ;
+   max-width: 100%;
+   transition: 0.5s;
 }
 .main .container .mid .text{
    left: 50%;
@@ -86,8 +92,9 @@ nav{
    color: white;
 }
 .main .container .mid .text h1{
-   font-size: 60px;
+   font-size: 75px;
    letter-spacing: 5px;
+   text-transform: uppercase;
 }
 .main .container .mid .shad{
    left: 50%;
@@ -103,4 +110,14 @@ nav{
       transform: rotate(360deg);
    }
 }
+@keyframes planetTransition {
+   100%{
+      transform: rotate(1180deg);
+      filter: blur(10px);
+   }
+}
 /* end content */
+.controls {
+   position: relative;
+   z-index: 1;
+}

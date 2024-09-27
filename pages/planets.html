@@ -23,7 +23,7 @@
       <!-- -------------------------------------------------- -->
       
       <!-- start main content -->
-      <div class="main">
+      <div class="main" id="main">
          <!-- start background -->
                <div class="bg-animation">
                   <div id="stars"></div>
@@ -33,14 +33,14 @@
                </div>
          <!-- end background -->
          <nav class="navbar navbar-expand-lg navbar-light ">
-            <div class="container-fluid justify-content-between">
-              <a class="navbar-brand w-25 logo "  href="#"><img src="../images/NASA_logo.svg.png" class="w-100"   alt=""></a>
+            <div class="container-fluid justify-content-between align-items-center">
+              <a class="navbar-brand logo "  href="#"><img src="../images/NASA_logo.svg.png" width="100" alt=""></a>
               <button class="navbar-toggler text-bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon text-white">
                   <i class="fas fa-bars"></i>
                 </span>
               </button>
-              <div class="collapse navbar-collapse justify-content-around " id="navbarNav">
+              <div class="collapse navbar-collapse justify-content-between " id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
                     <a class="nav-link " href="./home.html">Home</a>
@@ -69,7 +69,7 @@
           </nav>
         
 <!-- ----------------------------------------------------------------------------------- -->
-      <div class="container d-flex align-items-center justify-content-center">
+      <div class="container d-flex align-items-center justify-content-center gap-3" id="mainContent">
          <div class="left m-0 p-0">
             <h4 class="mb-4 text-light">1/9</h4>
             <p class="text-secondary fs-6 mb-4">
@@ -77,13 +77,13 @@
             </p>
             <a href="https://www.google.com">LEARN MORE</a>
          </div>
-         <div class="mid position-relative m-0 p-0">
-            <img src="../images/sun6.png" alt="" width="500px">
+         <div class="mid position-relative m-0 p-0" id="mid">
+            <img alt="" width="" id="planet">
             <div class="text position-absolute">
-               <h1>SUN</h1>
+               <h1 id="planetName">SUN</h1>
                <p>Lorem ipsum dolor sit.</p>
             </div>
-            <div class="shad position-absolute"></div>
+            <div class="shad position-absolute" id="shad"></div>
          </div>
          <div class="right">
             <div class="tex">
@@ -109,7 +109,7 @@
             <i class="fa-solid fa-angle-left me-2"></i>
             Prev
          </div>
-         <div class="right text-light">
+         <div onclick="p_transition()" class="right text-light">
             Next
             <i class="fa-solid fa-angle-right ms-2"></i>
          </div>
@@ -117,6 +117,7 @@
    </div>
 <!-- end main content -->
 
+   <script src="../js/planets.js"></script>
    </body>
 
 </html>
