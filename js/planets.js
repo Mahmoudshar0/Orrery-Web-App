@@ -26,6 +26,9 @@ let planetType = document.getElementById("planetType");
 let planetRad = document.getElementById("planetRad");
 let planetTemp = document.getElementById("planetTemp");
 let type = document.getElementById("type");
+let index = document.getElementById("index");
+let next = document.getElementById("next")
+let prev = document.getElementById("prev")
 
 let cntr = 0;
 planet.src = "../images/sun.png";
@@ -69,7 +72,66 @@ function nextPlanet(){
       planetType.style.top="0px";
       planetRad.style.top="0px";
       planetTemp.style.top="0px";
+      cntr = cntr==8 ? 0 : cntr;
+      next.src = imgs[(cntr+1 % imgs.length)];
+      cntr= cntr==0 ? 8 : cntr;
+      prev.src = imgs[cntr];
    }
    ,500);
+   index.innerHTML=(cntr+1)+"/9";
+   console.log("after next " +cntr)
 
 }
+
+
+function prevPlanet(){
+
+   cntr = cntr==0 ? 8 : cntr;
+   mid.style.opacity="0";
+   planetDis.style.left="-330px";
+   planetAge.style.top="40px";
+   planetType.style.top="40px";
+   planetRad.style.top="40px";
+   planetTemp.style.top="40px";
+   setTimeout(
+      function(){
+      if(cntr != 8){
+         shad.style.width="100%";
+         shad.style.height="100%";
+         main.style.backgroundImage="url('../images/galaxy_1.jpeg')";
+         planet.setAttribute("width","500px");
+         type.innerHTML = "Planet type"
+      }
+      else{
+         shad.style.width="75%"
+         shad.style.height="75%"
+         main.style.backgroundImage="url('../images/main-bg-1.jpg')";
+         type.innerHTML = "star type"
+      }
+      planetName.innerHTML = planetsName[cntr];
+      planet.src = imgs[cntr];
+      shad.style.boxShadow = `0 0 50px 5px ${shads[cntr]}`
+      mid.style.opacity="1"
+      planetDis.innerHTML=planetsDes[cntr];
+      planetAge.innerHTML = planetsAge[cntr];
+      planetType.innerHTML = planetsType[cntr];
+      planetRad.innerHTML = planetsRad[cntr];
+      planetTemp.innerHTML = planetsTemp[cntr];
+      planetDis.innerHTML=planetsDes[cntr];
+      planetDis.style.left="0px";
+      planetAge.style.top="0px";
+      planetType.style.top="0px";
+      planetRad.style.top="0px";
+      planetTemp.style.top="0px";
+      cntr= cntr==0 ? 8 : cntr;
+      prev.src = imgs[cntr];
+      next.src = imgs[(cntr+1 % imgs.length)];
+   }
+   ,500);
+   index.innerHTML=(cntr+1)+"/9";
+   cntr-=1;
+   console.log("after prev " +cntr)
+}
+
+   window.setInterval(nextPlanet,4000);
+   // window.setInterval(prevPlanet,4000);
