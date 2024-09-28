@@ -55,17 +55,26 @@ a {
 
 
 /* start content */
+.main .container .left{
+   overflow: hidden;
+}
 .main .container .left p{
    width: 330px;
+   position: relative;
+   transition: 0.3s;
+   color: #ababab;
 }
 .main .container .left a{
    color: white;
    letter-spacing: 3px;
-   padding: 0 0 5px;
+   width: fit-content;
+   padding: 0 10px 10px 0;
    text-decoration: none;
    border-bottom: 2px solid white;
    transition: 0.3s ;
    cursor: pointer;
+   display: block;
+   height: 30px;
 }
 .main .container .left a:hover{
    color: #777;
@@ -111,6 +120,17 @@ a {
       transform: rotate(1180deg);
       filter: blur(10px);
    }
+}
+
+.main .container .right .tex{
+   overflow: hidden;
+   min-width: 185px;
+}
+.main .container .right .tex p{
+   position: relative;
+   transition: 0.3s;
+   max-width: 240px;
+   color: #ababab;
 }
 /* end content */
 .controls {

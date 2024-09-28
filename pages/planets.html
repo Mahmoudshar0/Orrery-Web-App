@@ -20,22 +20,26 @@
    <body>
 
       
-      <!-- -------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------- -->
       
-      <!-- start main content -->
+<!-- start main content -->
+
       <div class="main" id="main">
-         <!-- start background -->
-               <div class="bg-animation">
-                  <div id="stars"></div>
-                  <div id="stars2"></div>
-                  <div id="stars3"></div>
-                  <div id="stars4"></div>
-               </div>
-         <!-- end background -->
-           <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light ">
-   <div class="container-fluid justify-content-between">
-     <a class="navbar-brand w-25 logo "  href="#"><img src="../images/NASA_logo.svg.png" class="w-100"   alt=""></a>
+<!-- start background -->
+         <div class="bg-animation">
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+            <div id="stars4"></div>
+         </div>
+<!-- end background -->
+
+<!-- -------------------------------------------------------------------------- -->
+
+<!-- start Navbar -->
+         <nav class="navbar navbar-expand-lg navbar-light p-2">
+   <div class="container justify-content-around align-items-center">
+     <a class="navbar-brand logo "  href="#"><img src="../images/NASA_logo.svg.png" width="100px" alt=""></a>
      <button class="navbar-toggler text-bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon text-white">
          <i class="fas fa-bars"></i>
@@ -67,14 +71,16 @@
        </div>
    </div>
    </div>
- </nav>
+         </nav>
+<!-- ena Navbar -->
 
-        
 <!-- ----------------------------------------------------------------------------------- -->
-      <div class="container d-flex align-items-center justify-content-center gap-3" id="mainContent">
-         <div class="left m-0 p-0">
+
+<!-- start center content -->
+<div class="container d-flex align-items-center justify-content-center gap-3" id="mainContent">
+         <div class="left m-0 me-3 p-0">
             <h4 class="mb-4 text-light">1/9</h4>
-            <p class="text-secondary fs-6 mb-4">
+            <p class=" fs-6 mb-4" id="planetDes">
                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, nesciunt ratione porro exercitationem qui veritatis quae consectetur eos delectus sit quis beatae, quam ipsum adipisci amet. Porro consectetur eos maxime.
             </p>
             <a href="https://www.google.com">LEARN MORE</a>
@@ -89,33 +95,41 @@
          </div>
          <div class="right ms-4">
             <div class="tex">
-               <h3 class="text-light mb-0">AGE</h3>
-               <P class="text-secondary">4.5 Billion year</P>
+               <h3 class="text-light mb-0">year length</h3>
+               <P class="" id="planetAge">4.5 Billion year</P>
             </div>
             <div class="tex">
-               <h3 class="text-light mb-0">START TYPE</h3>
-               <P class="text-secondary">Yallow Dwart</P>
+               <h3 class="text-light mb-0" id="type">STAR TYPE</h3>
+               <P class="" id="planetType">Yallow Dwart</P>
             </div>
             <div class="tex">
                <h3 class="text-light mb-0">RADIUS</h3>
-               <P class="text-secondary">654.540 Kilometars</P>
+               <P class="" id="planetRad">654.540 Kilometars</P>
             </div>
             <div class="tex">
                <h3 class="text-light mb-0">TEMPERATURE</h3>
-               <P class="text-secondary">5.500 Degrees Celsuis</P>
+               <P class="" id="planetTemp">5.500 Degrees Celsuis</P>
             </div>
          </div>
       </div>
+<!-- end center content -->
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+<!-- start controls -->
       <div class="controls ps-5 pe-5 d-flex justify-content-between align-items-center">
          <div class="left text-light">
             <i class="fa-solid fa-angle-left me-2"></i>
             Prev
          </div>
-         <div onclick="p_transition()" class="right text-light">
+         <div onclick="nextPlanet()" class="right text-light">
             Next
             <i class="fa-solid fa-angle-right ms-2"></i>
          </div>
       </div>
+<!-- end controls -->
+
+<!-- ------------------------------------------------------------------------------------------- -->
    </div>
 <!-- end main content -->
 
