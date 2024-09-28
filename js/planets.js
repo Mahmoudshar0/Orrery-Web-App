@@ -134,4 +134,3 @@ function prevPlanet(){
 }
 
    window.setInterval(nextPlanet,4000);
-   // window.setInterval(prevPlanet,4000);
