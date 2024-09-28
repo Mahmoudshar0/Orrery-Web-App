@@ -34,11 +34,7 @@ a {
    transition: 0.5s;
 }
 
-/* ------------------------------------------------------------- */
-nav{
-   z-index: 100;
-}
-
+* ------------------------------------------------------------- */
 .navbar a {
    color: #fff;
    margin-right: 50px;
@@ -52,10 +48,10 @@ nav{
  }
  
  .navbar-expand-lg {
-   padding: 20px ;
-}
-
+   padding: 20px;
+ }
 /* --------------------------------------------------------- */
+
 
 
 /* start content */
@@ -120,4 +116,5 @@ nav{
 .controls {
    position: relative;
    z-index: 1;
+   cursor: pointer;
 }
