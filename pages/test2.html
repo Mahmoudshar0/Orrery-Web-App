@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Babylon.js Orrery</title>
+   <style>
+      body { margin: 0; }
+      canvas { display: block; }
+   </style>
+</head>
+<body>
+   <canvas id="renderCanvas"></canvas>
+   <script src="https://cdn.babylonjs.com/babylon.js"></script>
+   <script>
+      // Babylon.js code to create the scene and render it
+      const canvas = document.getElementById('renderCanvas');
+      const engine = new BABYLON.Engine(canvas, true);
+      const scene = new BABYLON.Scene(engine);
+
+      const camera = new BABYLON.ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 2, 10, BABYLON.Vector3.Zero(), scene);
+      camera.attachControl(canvas, true);
+      const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 0), scene);
+
+      const sphere = BABYLON.MeshBuilder.CreateSphere("sphere", { diameter: 2 }, scene);
+
+      engine.runRenderLoop(function () {
+         scene.render();
+      });
+   </script>
+</body>
+</html>
