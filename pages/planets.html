@@ -1,143 +1,202 @@
 <!DOCTYPE html>
-   <html lang="en">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="website icon" href="../images/logo-sm-white.png" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/background.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/ultimate.css" />
+    <title>Planets</title>
+  </head>
 
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Planets</title>
-      <link rel="stylesheet" href="../css/bootstrap.min.css">
-      <link rel="stylesheet" href="../css/all.min.css">
-      <link rel="stylesheet" href="../css/normlize.css">
-      <link rel="stylesheet" href="../css/background.css">
-      <link rel="stylesheet" href="../css/ultimate.css">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link rel="stylesheet" href="../css/home.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet">
-      <link rel="stylesheet" href="../css/home.css">
-   </head>
+  <body>
+    <!-- --------------------------------------------------------------------------- -->
 
-   <body>
+    <!-- start background -->
+    <div class="bg-animation">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+      <div id="stars4"></div>
+    </div>
+    <!-- end background -->
 
-      
-<!-- --------------------------------------------------------------------------- -->
-      
-<!-- start main content -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid justify-content-between">
+        <a class="navbar-brand w-25 logo" href="#"
+          ><img src="../images/logo-sm-white.png" class="w-50" alt=""
+        /></a>
+        <button
+          class="navbar-toggler text-bg-transparent"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon text-white">
+            <i class="fas fa-bars"></i>
+          </span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-around"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./earth.html">Earth</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./planets.html">Planets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Solar-System.html">Solar System</a>
+            </li>
+          </ul>
+          <div>
+            <button class="btn ps-0">
+              <a
+                class="text-white link-body-emphasis m-0 active"
+                href="./about.html"
+                >About Us</a
+              >
+            </button>
+            <button class="btn">
+              <a class="btn btn-outline-primary btn-signup" href="./signUp.html"
+                >Sign Up</a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- ena Navbar -->
+    <!-- start main content -->
 
-      <div class="main" id="main">
-<!-- start background -->
-         <div class="bg-animation">
-            <div id="stars"></div>
-            <div id="stars2"></div>
-            <div id="stars3"></div>
-            <div id="stars4"></div>
-         </div>
-<!-- end background -->
+    <div class="main" id="main">
+      <!-- ----------------------------------------------------------------------------------- -->
 
-<!-- -------------------------------------------------------------------------- -->
-
-<!-- start Navbar -->
-         <!-- <nav class="navbar navbar-expand-lg navbar-light p-2">
-   <div class="container justify-content-center align-items-center">
-     <a class="navbar-brand logo "  href="#"><img src="../images/NASA_logo.svg.png" width="100px" alt=""></a>
-======= -->
-<nav class="navbar navbar-expand-lg navbar-light ">
-   <div class="container-fluid justify-content-between">
-     <a class="navbar-brand w-25 logo "  href="#"><img src="../images/NASA_logo.svg.png" class="w-100"   alt=""></a>
-     <button class="navbar-toggler text-bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon text-white">
-         <i class="fas fa-bars"></i>
-       </span>
-     </button>
-     <div class="collapse navbar-collapse justify-content-around " id="navbarNav">
-       <ul class="navbar-nav">
-         <li class="nav-item">
-           <a class="nav-link " href="./home.html">Home</a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link" href="./earth.html">Earth</a>
-         </li>
-         <li class="nav-item ">
-           <a class="nav-link active " href="./planets.html">Planets</a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link" href="./Solar-System.html">Solar System</a>
-         </li>
-            
-       </ul>
-       <div>
-         <button class="btn">
-           <a class="text-white link-body-emphasis m-0 active" href="./about.html">About Us</a>
-         </button>
-         <button class="btn">
-           <a class="btn btn-outline-primary btn-signup" href="./signUp.html">Sign Up</a>
-         </button>
-       </div>
-   </div>
-   </div>
- </nav>
-<!-- ena Navbar -->
-
-<!-- ----------------------------------------------------------------------------------- -->
-
-<!-- start center content -->
-<div class="container d-flex align-items-center justify-content-center gap-3" id="mainContent">
-         <div class="left m-0 me-3 p-0">
+      <!-- start center content -->
+      <div
+        class="container d-flex align-items-center justify-content-between"
+        id="mainContent"
+      >
+        <div class="row row-cols-1 row-cols-md-3 mt-5 p-4">
+          <div class="left col m-0">
             <h4 class="mb-4 text-light" id="index">1/9</h4>
+            <p id="planetDes">
+              The Sun is a medium-sized star at the center of our solar system.
+              It’s composed mainly of hydrogen and helium, undergoing nuclear
+              fusion to produce energy that provides heat and light to the
+              planets. The Sun’s gravity holds the solar system together.
+            </p>
             <a href="https://www.google.com">LEARN MORE</a>
-         </div>
-         <div class="mid position-relative m-0 p-0" id="mid">
-            <img alt="" width="" id="planet">
-            <div class="text position-absolute">
-               <h1 id="planetName">SUN</h1>
+          </div>
+
+          <div
+            class="mid col d-flex align-items-center justify-content-between position-relative m-0 p-0 stopMov"
+          >
+            <div onclick="prevImg()" class="prev d-block d-md-none text-light">
+              <i class="fa-solid fa-angle-left me-2 py-5 px-3"></i>
+
+              <!-- <img class="prev" src="" alt="" width="70px" id="prev"> -->
             </div>
-            <div class="shad position-absolute" id="shad"></div>
-         </div>
-         <div class="right ms-4">
+
+            <img alt="" class="w-100 stopMov" id="planet" />
+
+            <div onclick="nextImg()" class="next d-block d-md-none text-light">
+              <i class="fa-solid fa-angle-right ms-2 py-5 px-3"></i>
+
+              <!-- <img class="next" src="" alt="" width="70px" id="next"> -->
+            </div>
+          </div>
+
+          <div class="right col m-0 ps-md-5">
             <div class="tex">
-               <h3 class="text-light mb-0">year length</h3>
-               <P class="" id="planetAge">4.5 Billion year</P>
+              <div class="text">
+                <h1 id="planetName" class="mb-4">Sun</h1>
+              </div>
+              <h1 class="shad" id="shad"></h1>
+              <h3 class="text-light mb-0">Year length</h3>
+              <p class="" id="planetAge">"4.6 billion years"</p>
             </div>
             <div class="tex">
-               <h3 class="text-light mb-0" id="type">STAR TYPE</h3>
-               <P class="" id="planetType">Yallow Dwart</P>
+              <h3 class="text-light mb-0" id="type">Star Type</h3>
+              <p class="" id="planetType">"G-type Main-Sequence Star (G2V)"</p>
             </div>
             <div class="tex">
-               <h3 class="text-light mb-0">RADIUS</h3>
-               <P class="" id="planetRad">654.540 Kilometars</P>
+              <h3 class="text-light mb-0">RADIUS</h3>
+              <p class="" id="planetRad">"696,340 km"</p>
             </div>
             <div class="tex">
-               <h3 class="text-light mb-0">TEMPERATURE</h3>
-               <P class="" id="planetTemp">5.500 Degrees Celsuis</P>
+              <h3 class="text-light mb-0">TEMPERATURE</h3>
+              <p class="" id="planetTemp">
+                "Surface: ~5,500°C (9,932°F), Core: ~15 million°C (27
+                million°F)"
+              </p>
             </div>
-         </div>
+          </div>
+        </div>
       </div>
-<!-- end center content -->
+      <!-- end center content -->
 
-<!-- ------------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------------ -->
 
-<!-- start controls -->
-      <div class="controls ps-5 pe-5 d-flex justify-content-around gap-5 align-items-center">
-         <div onclick="prevPlanet()" class="left text-light">
-            <!-- <i class="fa-solid fa-angle-left me-2"></i>
-            Prev -->
-            <img class="prev" src="../images/mercury.png" alt="" width="70px" id="prev">
-         </div>
-         <div onclick="nextPlanet()" class="right text-light">
-            <!-- Next
-            <i class="fa-solid fa-angle-right ms-2"></i> -->
-            <img class="next" src="../images/neptune.png" alt="" width="70px" id="next">
-         </div>
+      <!-- start controls -->
+      <div
+        class="controls ps-5 pe-5 d-flex justify-content-around gap-5 align-items-center d-md-flex d-none stopMov"
+      >
+        <div onclick="prevImg()" class="left text-light stopMov">
+          <i class="fa-solid fa-angle-left me-2 stopMov"></i>
+          Prev
+
+          <!-- <img class="prev" src="" alt="" width="70px" id="prev"> -->
+        </div>
+        <div onclick="nextImg()" class="right text-light stopMov">
+          Next
+          <i class="fa-solid fa-angle-right ms-2 stopMov"></i>
+
+          <!-- <img class="next" src="" alt="" width="70px" id="next"> -->
+        </div>
       </div>
-<!-- end controls -->
+      <!-- end controls -->
 
-<!-- ------------------------------------------------------------------------------------------- -->
-   </div>
-<!-- end main content -->
+      <!-- ------------------------------------------------------------------------------------------- -->
 
-   <script src="../js/planets.js"></script>
-   </body>
-
+      <!-- end main content -->
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/planets.js"></script>
+  </body>
 </html>

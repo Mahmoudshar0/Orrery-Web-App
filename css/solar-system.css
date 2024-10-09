@@ -1,82 +1,271 @@
+/**
+ * General body styling
+ *
+ * @format
+ */
+
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: black;
-    margin: 0;
-    overflow: hidden; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  margin: 0;
+  overflow: hidden;
 }
-
-
-.solar-system {
-    position: relative;
-    width: 100vw; 
-    height: 100vh; 
+nav {
+  width: 100%;
+  z-index: 543;
 }
-
-.sun {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 130px; 
-    height: 130px;
-    background-image: url('../images/sun6.png'); 
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    z-index: 10;
-}
-
-.orbit {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border: 1px solid white;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    animation: rotate 20s linear infinite;
+.navbar-expand-lg {
+  padding: 20px;
 }
 
 .planet {
-    position: absolute;
-    width: 60px; 
-    height: 60px; 
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
+  width: 80px; /* حجم الكواكب الجديد */
+  height: 80px;
 }
 
 .planet img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    animation: spin 10s linear infinite; 
+  width: 100%;
+  height: auto;
 }
 
-.orbit1 { width: 18%; height: 18%; animation-duration: 4s; }
-.orbit2 { width: 28%; height: 28%; animation-duration: 6s; }
-.orbit3 { width: 38%; height: 38%; animation-duration: 8s; }
-.orbit4 { width: 48%; height: 48%; animation-duration: 10s; }
-.orbit5 { width: 58%; height: 58%; animation-duration: 12s; }
-.orbit6 { width: 68%; height: 68%; animation-duration: 14s; }
-.orbit7 { width: 78%; height: 78%; animation-duration: 16s; }
-.orbit8 { width: 88%; height: 88%; animation-duration: 18s; }
-.orbit9 { width: 98%; height: 98%; animation-duration: 20s; }
+/* يمكنك تخصيص كل كوكب على حدة إذا كنت تريد أحجامًا مختلفة */
+.planet1 img {
+  width: 60px;
+}
 
-.planet1 { top: 80px; left: 5%; }
-.planet2 { top: 30px; right:5%; }
-.planet3 { top: 75px; left: 5%; }
-.planet4 { bottom: -60px; left: 50%; }
-.planet5 { top: 0; left: 50%; }
-.planet6 { top: 90px; right: 5%; }
-.planet7 { top: 155px; left: 5%; }
-.planet8 { top: 25px; left: 30%; }
-.planet9 { bottom: 75px;; left: 10%; }
+.planet2 img {
+  width: 70px;
+}
 
+/* وهكذا لباقي الكواكب */
+
+.solar-system {
+  position: relative;
+  width: 100vw;
+  height: 90vh; /* Adjusted for better screen fit */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sun {
+  position: absolute;
+  width: 120px; /* Slightly larger Sun */
+  height: 120px;
+  background: url("../images/sun-40.gif");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+/* Orbit paths (invisible) */
+.orbit {
+  position: absolute;
+  border-radius: 50%;
+  border: none; /* Orbit lines are invisible */
+}
+
+/* Adjusted orbit sizes for better distribution */
+.orbit1 {
+  width: 200px;
+  height: 200px;
+}
+.orbit2 {
+  width: 300px;
+  height: 300px;
+}
+.orbit3 {
+  width: 400px;
+  height: 400px;
+}
+.orbit4 {
+  width: 500px;
+  height: 500px;
+}
+.orbit5 {
+  width: 600px;
+  height: 600px;
+}
+.orbit6 {
+  width: 700px;
+  height: 700px;
+}
+.orbit7 {
+  width: 800px;
+  height: 800px;
+}
+.orbit8 {
+  width: 900px;
+  height: 900px;
+}
+.orbit9 {
+  width: 1000px;
+  height: 1000px;
+}
+
+/* Planets rotating along the invisible orbit paths */
+.planet {
+  position: absolute;
+  border-radius: 50%;
+  animation: orbitRotate 40s linear infinite;
+  transform: translate(-50%, -50%);
+}
+
+.planet img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: spin 10s linear infinite; /* Planets spinning */
+}
+
+/* Orbit rotation keyframe */
+@keyframes orbitRotate {
+  0% {
+    transform: rotate(0deg) translateX(100px) translateY(-50%); /* Adjusted orbit start */
+  }
+  100% {
+    transform: rotate(360deg) translateX(100px) translateY(-50%); /* Complete orbit */
+  }
+}
+
+/* Planet spinning keyframe */
 @keyframes spin {
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Adjusted planet sizes and positioning */
+.planet1 {
+  /* Mercury */
+  animation-duration: 5s;
+  width: 25px; /* Adjusted size */
+  height: 25px;
+  transform-origin: 100px 100px; /* Closer orbit */
+}
+
+.planet2 {
+  /* Venus */
+  animation-duration: 8s;
+  width: 35px;
+  height: 35px;
+  transform-origin: 150px 150px;
+}
+
+.planet3 {
+  /* Earth */
+  animation-duration: 10s;
+  width: 40px;
+  height: 40px;
+  transform-origin: 200px 200px;
+}
+
+.planet4 {
+  /* Mars */
+  animation-duration: 12s;
+  width: 30px;
+  height: 30px;
+  transform-origin: 250px 250px;
+}
+
+.planet5 {
+  /* Jupiter */
+  animation-duration: 18s;
+  width: 60px;
+  height: 60px;
+  transform-origin: 300px 300px;
+}
+
+.planet6 {
+  /* Saturn */
+  animation-duration: 22s;
+  width: 55px;
+  height: 55px;
+  transform-origin: 350px 350px;
+}
+
+.planet7 {
+  /* Uranus */
+  animation-duration: 28s;
+  width: 50px;
+  height: 50px;
+  transform-origin: 400px 400px;
+}
+
+.planet8 {
+  /* Neptune */
+  animation-duration: 35s;
+  width: 48px;
+  height: 48px;
+  transform-origin: 450px 450px;
+}
+
+.planet9 {
+  /* Pluto */
+  animation-duration: 45s;
+  width: 25px;
+  height: 25px;
+  transform-origin: 500px 500px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sun {
+    width: 80px;
+    height: 80px;
+  }
+  .planet1 {
+    width: 18px;
+    height: 18px;
+    transform-origin: 75px 75px;
+  }
+  .planet2 {
+    width: 30px;
+    height: 30px;
+    transform-origin: 100px 100px;
+  }
+  .planet3 {
+    width: 36px;
+    height: 36px;
+    transform-origin: 125px 125px;
+  }
+  .planet4 {
+    width: 28px;
+    height: 28px;
+    transform-origin: 150px 150px;
+  }
+  .planet5 {
+    width: 50px;
+    height: 50px;
+    transform-origin: 175px 175px;
+  }
+  .planet6 {
+    width: 45px;
+    height: 45px;
+    transform-origin: 200px 200px;
+  }
+  .planet7 {
+    width: 35px;
+    height: 35px;
+    transform-origin: 225px 225px;
+  }
+  .planet8 {
+    width: 33px;
+    height: 33px;
+    transform-origin: 250px 250px;
+  }
+  .planet9 {
+    width: 20px;
+    height: 20px;
+    transform-origin: 275px 275px;
+  }
 }

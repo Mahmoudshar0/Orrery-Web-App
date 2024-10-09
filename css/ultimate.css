@@ -1,161 +1,144 @@
-*{
-   box-sizing: border-box;
-   margin: 0;
-   padding: 0;
+/** @format */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-body{
-   font-family: "Roboto", sans-serif;
-   margin: 0;
-   padding: 0;
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
 }
 
-h1, h2, h3, h4, h5, h6{
-   text-shadow: 0.5px 0.5px 8px white; 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-shadow: 0.5px 0.5px 8px white;
 }
 
 a {
- text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
 }
-.container{
-   position: relative;
-   z-index: 1;
+.container {
+  z-index: 1;
+  height: 500px;
 }
 /* ----------------------------------------------------- */
 
 /* start navbar */
 
-
 /* NAVBAR */
 
-.main{
-   height: 100vh;
-   background-image: url("../images/main-bg-1.jpg");
-   background-size: cover;
-   transition: 0.5s;
+/* ------------------------------------------------------------- */
+nav {
+  z-index: 55555;
 }
 
-* ------------------------------------------------------------- */
 .navbar a {
-   color: #fff;
-   margin-right: 50px;
-   font-size: 1.5rem;
-   cursor: pointer;
-   text-shadow: 0.5px 0.5px 9px white;
- }
- 
- nav .logo img {
-   max-width: 150px;
- }
- 
- .navbar-expand-lg {
-   padding: 20px;
- }
+  color: #fff;
+  margin-right: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-shadow: 0.5px 0.5px 9px white;
+}
+
+.navbar-expand-lg {
+  padding: 20px;
+}
+p {
+  color: #fff;
+}
 /* --------------------------------------------------------- */
 
+.main {
+  z-index: 50;
+}
 
+.main .container .mid img {
+  animation: planetRotate 50s linear infinite;
+  position: relative;
+  transition: 0.5s;
+}
 
-/* start content */
-.main .container .left{
-   overflow: hidden;
-}
-.main .container .left p{
-   width: 330px;
-   position: relative;
-   transition: 0.3s;
-   color: #ababab;
-}
-.main .container .left a{
-   color: white;
-   letter-spacing: 3px;
-   width: fit-content;
-   padding: 0 10px 10px 0;
-   text-decoration: none;
-   border-bottom: 2px solid white;
-   transition: 0.3s ;
-   cursor: pointer;
-   display: block;
-   height: 30px;
-}
-.main .container .left a:hover{
-   color: #777;
-}
-.main .container .mid{
-   width: 500px;
-   transition: 0.4s;
-}
-.main .container .mid img{
-   animation: planetRotate 100s linear infinite ;
-   max-width: 100%;
-   transition: 0.5s;
-}
-.main .container .mid .text{
-   left: 50%;
-   top: 50%;
-   transform: translate(-50%,-50%);
-   display: grid;
-   place-items: center;
-   color: white;
-}
-.main .container .mid .text h1{
-   font-size: 75px;
-   letter-spacing: 5px;
-   text-transform: uppercase;
-}
-.main .container .mid .shad{
-   left: 50%;
-   top: 50%;
-   transform: translate(-50%, -50%);
-   width: 75%;
-   height: 75%;
-   border-radius: 50%;
-   box-shadow: 0 0 50px 5px #ff8507;
-}
 @keyframes planetRotate {
-   100%{
-      transform: rotate(360deg);
-   }
-}
-@keyframes planetRotateRev {
-   0%{
-      transform: rotate(0deg);
-   }
-   100%{
-      transform: rotate(-360deg);
-   }
-}
-@keyframes planetTransition {
-   100%{
-      transform: rotate(1180deg);
-      filter: blur(10px);
-   }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.main .container .right .tex{
-   overflow: hidden;
-   min-width: 185px;
+.main .container .right .tex {
+  overflow: hidden;
+  min-width: 185px;
 }
-.main .container .right .tex p{
-   position: relative;
-   transition: 0.3s;
-   max-width: 240px;
-   color: #ababab;
+.main .container .right .tex h1 {
+  font-size: 3.5rem;
 }
+.main .container .right .tex p {
+  position: relative;
+  transition: 0.3s;
+  color: #ababab;
+}
+
+/* Animation */
+
+/* Fade out and fade in animation */
+
+.fade-in-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Initial hidden state for the content (offscreen on the left) */
+.slide-in-left {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* Final visible state (content slides in to its normal position) */
+.slide-in {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
 /* end content */
 
 /* ------------------------------------------ */
 
-.controls {
-   position: relative;
-   z-index: 1;
+.controls div {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
 }
-.controls img{
-   animation: planetRotateRev 30s linear infinite ;
-   transition: transform 1s ease;
-   cursor: pointer;
-}
-.controls .prev:hover {
-   transform: scale(1.3);
-}
-.controls .next:hover {
-   transform: scale(1.3);
+
+@media screen and (max-width: 768px) {
+  .container {
+    min-height: 1000px;
+  }
+
+  .main .container .mid {
+    justify-content: center;
+  }
+
+  .main .container .mid img {
+    width: 75% !important;
+    margin: 50px auto;
+    position: relative;
+  }
+
+  .main .container .right {
+    text-align: center !important;
+  }
 }
